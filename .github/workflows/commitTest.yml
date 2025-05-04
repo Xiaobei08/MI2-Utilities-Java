@@ -1,6 +1,6 @@
 name: Commit Testing and Tag Publishing
 
-on: [push]
+on: [push,workflow_dispatch]
 
 jobs:
   buildJar:
