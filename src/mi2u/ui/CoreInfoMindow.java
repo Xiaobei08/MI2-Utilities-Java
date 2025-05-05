@@ -274,7 +274,7 @@ public class CoreInfoMindow extends Mindow2{
                     req.add(stack.item, Mathf.floor(stack.amount * (plan.breaking ? (cbhas ? cbprog : 1f) * state.rules.deconstructRefundMultiplier*state.rules.buildCostMultiplier : (cbhas ? cbprog - 1f : -1f) * state.rules.buildCostMultiplier)));
                 }
 
-                time[0] += (cbhas?cbb:plan.block.buildCost) * state.rules.buildCostMultiplier * (cbhas ? (plan.breaking ? cbprog : 1f - cbprog) : 1f) / 60f / (player.unit().type.buildSpeed * player.unit().buildSpeedMultiplier * state.rules.buildSpeed(player.team()));
+                time[0] += (cbhas?cbb:plan.block.buildTime) * state.rules.buildCostMultiplier * (cbhas ? (plan.breaking ? cbprog : 1f - cbprog) : 1f) / 60f / (player.unit().type.buildSpeed * player.unit().buildSpeedMultiplier * state.rules.buildSpeed(player.team()));
             });
 
             control.input.selectPlans.each(plan -> {
@@ -291,7 +291,7 @@ public class CoreInfoMindow extends Mindow2{
                     req2.add(stack.item, Mathf.floor(stack.amount * (plan.breaking ? (cbhas ? cbprog : 1f) * state.rules.deconstructRefundMultiplier*state.rules.buildCostMultiplier : (cbhas ? cbprog - 1f : -1f) * state.rules.buildCostMultiplier)));
                 }
 
-                time[1] += (cbhas?cbb:plan.block.buildCost) * state.rules.buildCostMultiplier * (cbhas ? (plan.breaking ? cbprog : 1f - cbprog) : 1f) / 60f / (player.unit().type.buildSpeed * player.unit().buildSpeedMultiplier * state.rules.buildSpeed(player.team()));
+                time[1] += (cbhas?cbb:plan.block.buildTime) * state.rules.buildCostMultiplier * (cbhas ? (plan.breaking ? cbprog : 1f - cbprog) : 1f) / 60f / (player.unit().type.buildSpeed * player.unit().buildSpeedMultiplier * state.rules.buildSpeed(player.team()));
             });
 
             if(buildPlanTable.getChildren().find(e -> e.name != null && e.name.equals("bpt-time")) instanceof Label l){
