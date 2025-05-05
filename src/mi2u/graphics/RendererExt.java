@@ -371,7 +371,7 @@ public class RendererExt{
                     Tile tile = unit.tileOn();
                     int max = mi2ui.settings.getInt("enUnitPath.length", 40);
                     for(int tileIndex = 1; tileIndex <= max; tileIndex++){
-                        Tile nextTile = pathfinder.getTargetTile(tile, pathfinder.getField(unit.team, unit.type.flowfieldPathType, Pathfinder.fieldCore));
+                        Tile nextTile = pathfinder.getTargetTile(tile, pathfinder.getField(unit.team, unit.pathType(), Pathfinder.fieldCore));
                         if(nextTile == null) break;
                         if(nextTile == tile) break;
                         Lines.stroke(1.5f);
