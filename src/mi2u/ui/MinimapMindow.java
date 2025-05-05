@@ -411,14 +411,14 @@ public class MinimapMindow extends Mindow2{
                 Draw.reset();
             }
 
-            //could be buggy
-            if(drawObjective){
-                state.rules.objectives.eachRunning(obj -> {
-                    for(var marker : obj.markers){
-                        marker.drawMinimap(renderer.minimap);
-                    }
-                });
-            }
+//            //could be buggy
+//            if(drawObjective){
+//                state.rules.objectives.eachRunning(obj -> {
+//                    for(var marker : obj.markers){
+//                        marker.drawMinimap(renderer.minimap);
+//                    }
+//                });
+//            }
 
             Draw.reset();
         }
